@@ -13,9 +13,10 @@ namespace Vigilante
 
         private void FixedUpdate()
         {
+            Vector3 position = transform.position;
             float input = Input.GetAxisRaw("Horizontal");
             float speed = input * RunSpeed * Time.fixedDeltaTime;
-            rigidbody.MovePosition(transform.position + (Vector3.right * speed));
+            rigidbody.MovePosition(position + (Vector3.right * speed));
         }
     }
 }
