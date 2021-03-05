@@ -4,7 +4,10 @@ namespace Vigilante
 {
     public class Arrow : MonoBehaviour
     {
-        [Min(0f)] public float ArrowheadMass = 1f;
+        public static readonly float DamageValue = 10f;
+        public bool IsPlayerOwned;
+
+        [SerializeField] [Min(0f)] private float ArrowheadMass = 1f;
 
         [SerializeField] private Transform arrowhead;
         private new Rigidbody rigidbody;

@@ -5,8 +5,9 @@ namespace Vigilante
     public class Bow : MonoBehaviour
     {
         [Range(100f, 5000f)] public float ArrowShootForce = 1000f;
-        [Min(0)] public float ArrowDrawTime = 1f;
+        [Min(0f)] public float ArrowDrawTime = 1f;
 
+        [SerializeField] private bool isPlayerOwned;
         [SerializeField] private Transform arrowPrefab;
         [SerializeField] private Transform referenceArrow;
 
@@ -64,6 +65,7 @@ namespace Vigilante
             // TODO: get from pool
             currentArrow = Instantiate(arrowPrefab, referenceArrow.position, referenceArrow.rotation);
             currentArrow.rotation = referenceArrow.rotation;
+            currentArrow.GetComponent<Arrow>().IsPlayerOwned = isPlayerOwned;
 
             canShoot = true;
         }

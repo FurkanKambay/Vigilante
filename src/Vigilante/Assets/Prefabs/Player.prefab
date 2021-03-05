@@ -59,6 +59,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ArrowShootForce: 2500
   ArrowDrawTime: 0
+  isPlayerOwned: 1
   arrowPrefab: {fileID: 6880318396415749467, guid: 949a88236ab2c134daadc604418f7c25, type: 3}
   referenceArrow: {fileID: 2814659666523575886}
 --- !u!1001 &1982571796853786349
@@ -119,6 +120,14 @@ PrefabInstance:
     - target: {fileID: 753987795876021071, guid: 4cc6103307b7f0b4a9595613c4bfb921, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1686659317358223145, guid: 4cc6103307b7f0b4a9595613c4bfb921, type: 3}
+      propertyPath: RegenerationRate
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1686659317358223145, guid: 4cc6103307b7f0b4a9595613c4bfb921, type: 3}
+      propertyPath: IsPlayer
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4cc6103307b7f0b4a9595613c4bfb921, type: 3}
